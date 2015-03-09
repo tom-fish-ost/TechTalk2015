@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Healthcare Data Analytics - OST Tech Talk 2015</title>
+    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="author" content="Fish & Jantz">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta property="og:image" content="http://s3.amazonaws.com/hakim-static/reveal-js/sharer-image.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link rel="stylesheet" href="reveal.js-3.0.0/css/reveal.css">
+    <link rel="stylesheet" href="reveal.js-3.0.0/css/theme/moon.css" id="theme">
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="reveal.js-3.0.0/lib/css/zenburn.css">
+    <!-- Printing and PDF exports -->
+    <script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match(/print-pdf/gi) ? 'reveal.js-3.0.0/css/print/pdf.css' : 'reveal.js-3.0.0/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="reveal">
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides">
+            <section>
+                <h1>Healthcare Data Analytics</h1>
+                <h2>Tom Fish | Alex Jantz</h2>
+            </section>
+            <section>
+                <section>
+                    <h1>Historical Case Study</h1>
+                    <h2>1854 Broad Street cholera outbreak</h2>
+                </section>
+                <section>
+                    <h2>John Snow</h2>
+                    <img src="John_Snow.jpg" height="400"/>
+                    <img src="Jon-Snow-S4.jpg" height="400" />
+                </section>
+                <section>
+                    <h2>John Snow's Data Visualization</h2>
+                    <img src="londonCropped.png" />
+                </section>
+                <section>
+                    <h2>Modern Data Visualization</h2>
+                    <img src="SnowMap_Points.png">
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h1>Healthcare Data</h1>
+                </section>
+                <section>
+                    <h2>Unstructured Data</h2>
+                    <img src="room_of_medical_files.jpg" />
+                </section>
+                <section>
+                    <h2>Structured Data</h2>
+                    <img src="mainerd.png" height="500"/>
+                </section>
+                <section>
+                    <h2>Machine-Generated Data</h2>
+                    <img src="EKG29.jpg" />
+                </section>
+                <section>
+                    <h2>Electronic Health Record</h2>
+                    <img src="cerner.png" />
+                </section>
+                <section>
+                    <h2>How to Store This (Epic)</h2>
+                    <ul>
+                        <li>Operational Data - Cache</li>
+                        <li>Clarity (Reporting) - SQL or Oracle</li>
+                        <li>Data Warehouse</li>
+                    </ul>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h1>Analysis</h1>
+                    <h4>Or, we have all this data, now what?</h4>
+                </section>
+                <section>
+                    <h2>Example: Unplanned Self-Extubation</h2>
+                    <img src="extubation.png" />
+                </section>
+                <section>
+                    <h2>Operational Reports</h2>
+                    <ul>
+                        <li>EHR</li>
+                        <li>Flowsheets</li>
+                        <li>Staffing/Scheduling</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Traditional Reporting</h2>
+                    <ul>
+                        <li>Crystal</li>
+                        <li>SSRS</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>OLAP Cubes</h2>
+                    <ul>
+                        <li>Business Objects</li>
+                        <li>SQL Server Analysis Services</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Visualization and Self Discovery</h2>
+                    <ul>
+                        <li>QlikView</li>
+                        <li>Tableau</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>QlikView Example</h2>
+                    <img src="surgicalDashboard.png" />
+                </section>
+            </section>
+            <section>
+                <h2>Questions?</h2>
+                <img src="Matrix.gif" />
+            </section>
+        </div>
+    </div>
+
+        
+    <script src="reveal.js-3.0.0/lib/js/head.min.js"></script>
+    <script src="reveal.js-3.0.0/js/reveal.js"></script>
+    <script>
+
+        // Full list of configuration options available at:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+
+            transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+            // Optional reveal.js plugins
+            dependencies: [
+                { src: 'reveal.js-3.0.0/lib/js/classList.js', condition: function () { return !document.body.classList; } },
+                { src: 'reveal.js-3.0.0/plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+                { src: 'reveal.js-3.0.0/plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+                { src: 'reveal.js-3.0.0/plugin/highlight/highlight.js', async: true, condition: function () { return !!document.querySelector('pre code'); }, callback: function () { hljs.initHighlightingOnLoad(); } },
+                { src: 'reveal.js-3.0.0/plugin/zoom-js/zoom.js', async: true },
+                { src: 'reveal.js-3.0.0/plugin/notes/notes.js', async: true }
+            ]
+        });
+
+    </script>
+
+</body>
+</html>
